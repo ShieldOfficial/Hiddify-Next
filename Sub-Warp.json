@@ -91,6 +91,10 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "@Vpn_Shield § 0",
+        "@Vpn § 1",
+        "@Shield § 2",
+        "@VpnShield § 3"
         "WARP § 0",
         "WARP § 1",
         "WARP § 2",
@@ -351,4 +355,4 @@
       "external_controller": "127.0.0.1:6756"
     }
   }
-    }
+}
