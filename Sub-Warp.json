@@ -34,6 +34,11 @@
     ],
     "rules": [
       {
+        "domain_suffix": ".ir",
+        "geosite": "ir",
+        "server": "dns-direct"
+      },
+      {
         "domain": "cp.cloudflare.com",
         "server": "dns-remote",
         "rewrite_ttl": 3000
@@ -42,16 +47,16 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "2a06:98c1:3123::",
-        "2a06:98c1:3122::",
-        "188.114.99.0",
-        "188.114.98.0",
+        "188.114.96.3",
+        "188.114.97.3",
+        "2a06:98c1:3121::6",
+        "2a06:98c1:3120::6",
         "104.18.203.232",
         "104.18.202.232",
-        "2a06:98c1:3121::3",
-        "2a06:98c1:3120::3",
-        "188.114.98.0",
-        "188.114.99.0"
+        "172.64.111.10",
+        "172.64.110.10",
+        "2606:4700:e0::ac40:6e0a",
+        "2606:4700:e0::ac40:6f0a"
       ]
     },
     "independent_cache": true
@@ -65,6 +70,7 @@
       "auto_route": true,
       "strict_route": true,
       "endpoint_independent_nat": true,
+      "stack": "mixed",
       "sniff": true,
       "sniff_override_destination": true
     },
@@ -120,18 +126,19 @@
         "WARP § 9"
       ],
       "url": "http://cp.cloudflare.com/",
-      "interval": "10m0s"
+      "interval": "10m0s",
+      "idle_timeout": "1h40m0s"
     },
     {
       "type": "wireguard",
       "tag": "WARP § 0",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:8aed:5a23:c787:b3:e8c7/128"
+        "2606:4700:110:8a4d:642c:d4c9:38fc:ca0a/128"
       ],
-      "private_key": "6AbUObClDV0oCN7Ryda2Rc9rbD9hIXbXrHihlmnbpEY=",
-      "server": "188.114.97.193",
-      "server_port": 7152,
+      "private_key": "2L7YvF+zq0JKO4X4y8+dxQk4/vbAq/XD8tNEpQtuIkE=",
+      "server": "188.114.97.75",
+      "server_port": 3854,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
@@ -144,11 +151,11 @@
       "tag": "WARP § 1",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:835f:5811:1752:4f92:204e/128"
+        "2606:4700:110:8ed1:38bb:97b1:a91c:3366/128"
       ],
-      "private_key": "YLI3u0rUhSTiSv0+og8HP02BfGg4Xsca5wQBahHSZ3U=",
-      "server": "188.114.99.82",
-      "server_port": 1074,
+      "private_key": "GCcA1NvbG7jpQZDoLngfOHUC4FIJkakvl0sHkbBR4WU=",
+      "server": "188.114.97.37",
+      "server_port": 968,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
@@ -161,11 +168,11 @@
       "tag": "WARP § 2",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:8c2d:ba08:a71d:14f8:f465/128"
+        "2606:4700:110:893a:5b62:169d:81cf:7688/128"
       ],
-      "private_key": "UKcI00xEBWg0csthU2kTV6peKxiY8BIWSIn6VRzG10o=",
-      "server": "188.114.99.228",
-      "server_port": 903,
+      "private_key": "WDWjgq//O1oqOlxCrrg+G6fkdMBJmPRq4kqZ/NzivUc=",
+      "server": "188.114.97.15",
+      "server_port": 1180,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
@@ -178,11 +185,11 @@
       "tag": "WARP § 3",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:8511:6494:6501:a5a4:49a1/128"
+        "2606:4700:110:83e6:6b03:d74a:5233:77e5/128"
       ],
-      "private_key": "GM1Fs6V4wQRnKCw/b8FqEijLQn+/H7favyXJb3IhzHg=",
-      "server": "188.114.99.200",
-      "server_port": 903,
+      "private_key": "yMgljEtlteTwfOPz+tBOGlIxNfyrpfACmydB29eAzVY=",
+      "server": "188.114.96.7",
+      "server_port": 968,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
@@ -195,11 +202,11 @@
       "tag": "WARP § 4",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:8860:bc9b:478b:b560:d33/128"
+        "2606:4700:110:8ca0:7e10:d642:8d25:173/128"
       ],
-      "private_key": "YGN0Vt1xRv5tfM3EB9ZKm2PLN0BW2vKQ18YJgjZkym0=",
-      "server": "188.114.99.194",
-      "server_port": 903,
+      "private_key": "iMuBDLZ0uVtSgqK8yr/oFMf/jD7LNrILtkAW5U3hDGw=",
+      "server": "188.114.96.201",
+      "server_port": 1180,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
@@ -212,11 +219,11 @@
       "tag": "WARP § 5",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:8b31:297a:10d8:3138:3c20/128"
+        "2606:4700:110:81cf:1bc7:f4f6:3021:891e/128"
       ],
-      "private_key": "iL/T4KOkqceRH8p2K9LnXlyQy+T686IXqjvF0ZFHzUc=",
-      "server": "188.114.99.225",
-      "server_port": 903,
+      "private_key": "2EZNjqlQyvJejdCSjTuEWnA71bydyHSio4fYerVJk38=",
+      "server": "188.114.98.247",
+      "server_port": 859,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
@@ -229,11 +236,11 @@
       "tag": "WARP § 6",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:873d:e4d3:56c9:76ef:ed36/128"
+        "2606:4700:110:8bcf:5503:5815:bf4a:8303/128"
       ],
-      "private_key": "cKRaqErTi2k/klp8pwmS29z25C0HxhY80jzz4UBA+Ec=",
-      "server": "188.114.99.97",
-      "server_port": 2408,
+      "private_key": "MKwsPmDd0lo0qD7Hi1Edw0xL9gs7lR78+IXCdKegJmk=",
+      "server": "188.114.98.195",
+      "server_port": 859,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
@@ -246,11 +253,11 @@
       "tag": "WARP § 7",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:8570:345c:9568:3455:752c/128"
+        "2606:4700:110:8706:d997:816:852a:1a48/128"
       ],
-      "private_key": "CA10eECw6ugsi9YuHVUdjsRx6NPuohUft9qmdICL7Vg=",
-      "server": "188.114.99.88",
-      "server_port": 2408,
+      "private_key": "SENi77UVH9dLgzh3I9SXfgkSx8GBJSpcG8UizmSmCk4=",
+      "server": "188.114.97.37",
+      "server_port": 1180,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
@@ -263,11 +270,11 @@
       "tag": "WARP § 8",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:880f:7793:70e6:a5c0:ce8c/128"
+        "2606:4700:110:8395:ceaa:7755:8158:10f9/128"
       ],
-      "private_key": "QHvXt7+XW0xpmXgC52W5uJR2hswU4GqcgyjjvfT0oHU=",
-      "server": "188.114.99.24",
-      "server_port": 2408,
+      "private_key": "mMPtrgz8rSAdNH1tB+mF/j7a7OZEnNV+6qDVq2fPKn0=",
+      "server": "188.114.97.75",
+      "server_port": 3854,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
@@ -280,11 +287,11 @@
       "tag": "WARP § 9",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:89b1:5455:e49d:b360:cabf/128"
+        "2606:4700:110:8a95:6c64:a154:2d46:ba4e/128"
       ],
-      "private_key": "QP7Gf85llFcevYANsEyYmm1vIqorIcso+OHjCaouvWQ=",
-      "server": "188.114.99.75",
-      "server_port": 5956,
+      "private_key": "WKrfwc8wYeItKLQRENKoIbcG+3f08sYwgWKGy8YuY0o=",
+      "server": "188.114.97.37",
+      "server_port": 968,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
@@ -341,8 +348,15 @@
       {
         "clash_mode": "Global",
         "outbound": "select"
+      },
+      {
+        "domain_suffix": ".ir",
+        "geosite": "ir",
+        "geoip": "ir",
+        "outbound": "bypass"
       }
     ],
+    "final": "select",
     "auto_detect_interface": true,
     "override_android_vpn": true
   },
@@ -352,7 +366,8 @@
       "path": "clash.db"
     },
     "clash_api": {
-      "external_controller": "127.0.0.1:6756"
+      "external_controller": "127.0.0.1:6756",
+      "secret": "ts2s9UimTbTJmT-q"
     }
   }
 }
