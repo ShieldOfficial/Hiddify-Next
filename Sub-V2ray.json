@@ -5,7 +5,7 @@
    "tag": "Join+➣+@Vpn_Shield++|+1 § 0",
    "server": "join-shield-vpn.fastly80-2.hosting-ip.com",
    "server_port": 80,
-   "uuid": "4a54fc9e-b717-4815-9d8a-b5bbc401aa56",
+   "uuid": "join-telegram-Vpn-shield",
    "transport": {
     "type": "ws",
     "path": "/vpn_shield--vpn_shield--vpn_shield--vpn_shield---------vpn_shield---------vpn_shield---------vpn_shield---------vpn_shield---------vpn_shield---------vpn_shield---------vpn_shield---------vpn_shield---------vpn_shield---------vpn_shield---------vpn_shield---------vpn_shield---------vpn_shield---------vpn_shield---------vpn_shield",
